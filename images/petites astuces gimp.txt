@@ -1,0 +1,11 @@
+1. Donner une forme ronde à une image
+-fichier->ouvrir
+-Sélection->tout
+dans la boite à outils
+-2eme(selection elliptique)+shift
+-calque->transparence->ajouter un calque alpha
+-selection->inverser
+Enfin appuyez sur le bouton clavier "Suppr"
+-fichier->Expoter sous...
+
+2.
