@@ -367,6 +367,13 @@ final class OCEANWP_Theme_Class {
 	public static function admin_scripts() {
 		global $pagenow;
 		if ( 'nav-menus.php' == $pagenow ) {
+
+			//integration de javascript de bootstrap boris
+			wp_enqueue_script( 'bootstrap_js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js', array('jquery'), NULL, true );
+
+			//integration du style css de bootstrap boris
+			wp_enqueue_style( 'bootstrap_css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', false, NULL, 'all' );
+
 			wp_enqueue_style( 'oceanwp-menus', OCEANWP_INC_DIR_URI .'walker/assets/menus.css' );
 		}
 	}
@@ -379,7 +386,7 @@ final class OCEANWP_Theme_Class {
 	public static function theme_css() {
 
 		// Define dir
-		$dir = OCEANWP_CSS_DIR_URI;
+		$dir = OCEANWP_CSS_DIR_URI; 
 		$theme_version = OCEANWP_THEME_VERSION;
 
 		// Remove font awesome style from plugins
